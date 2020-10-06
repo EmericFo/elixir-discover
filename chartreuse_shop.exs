@@ -1,5 +1,13 @@
 defmodule Chartreuse_shop do
 
+  defp get_alcool_reference do
+    %{
+      "Verte" => 55,
+      "ODF" => 45,
+      "Liqueur" => 56
+    }
+  end
+
   def next_message do
     receive do
       {:order, {product,quantity}, from_pid}->
@@ -10,21 +18,16 @@ defmodule Chartreuse_shop do
             send from_pid, 42
 
       {:alcool, product, from_pid}->
-        reference = %{
-          "Verte" => 55,
-          "ODF" => 45,
-          "Liqueur" => 56
-        }
 
-        result = Map.get(reference, product, "Unknow references")
+        result =  get_alcool_reference()
+        |> Map.get(product, "Unknow references")
 
-        send from_pid, {:has_degrees, result} # with map
-        # extract fonction
-
-
+        send from_pid, {:has_degrees, result}
     end
     next_message()
   end
+
+
 
   def open do
     spawn Chartreuse_shop, :next_message, []
