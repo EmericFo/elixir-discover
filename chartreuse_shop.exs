@@ -27,8 +27,6 @@ defmodule Chartreuse_shop do
     next_message()
   end
 
-
-
   def open do
     spawn Chartreuse_shop, :next_message, []
   end

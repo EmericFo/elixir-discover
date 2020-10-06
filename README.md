@@ -39,7 +39,17 @@ doctest
 
 # Process and messages
 regardons le fichier 'process.exs' et essayons les commandes  
-
+Jouer avec les process, depuis iex :
+- taper la commande c("chartreuse_shop.exs")
+- taper la commande  c("chartreuse_shop_customer.exs")
+- créer un shop : myShop = Chartreuse_shop.open
+- créer un client : jéjé = Chartreuse_shop_customer.new_customer
+- observer le nom de la méthode suivante : Process.alive? jéjé
+- observer le résultat de la commande : send myShop, {:order, {"verte", 3}, jéjé}
+- send myShop, {:alcool, "Verte", jéjé}
+- send myShop, {:alcool, "jaune", jéjé}  
+- Process.exit(jéjé, :halt)
+- Process.exit(myShop, :halt)
 
 # Reste à parler de
 Meta programming:	modifie le langage. aka macro  
