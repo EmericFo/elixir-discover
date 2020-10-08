@@ -2,44 +2,44 @@
  - Sur la VM BEAM d'Erlang (1987)
  - distribué, communication réseau natif
  - Concurrent, fonctionnel et immutable
- - tolerant au crash
+ - tolérant aux crash
 
 # Installation
 https://elixir-lang.org/install.html
 
 # IDE
 - vi  :)
-- atom avec le package language-elixir + package script  + package  platformio-ide-terminal
+- atom avec le package language-elixir + package script
 - plein d'autres
 
-# Premières commandes, let's play
+# First commands, let's play
 Dans une console, lancer la commande 'iex'  
 Puis essayer chaque ligne du fichier 'firstCommands.exs' depuis l'interpréteur iex  
 
-# Observons un module
+# Module observation
 Ouvrir MapExample.exs
-le lancer depuis un terminal avec la command 'elixir MapExample.exs'
+le lancer depuis un terminal avec la commande 'elixir MapExample.exs'
 
 depuis iex c'est possible aussi  
 c("mapExample.exs") # compile  
 MapExample.callAll()
 
-loopOver.exs
 
-# Recursion et pattern Matching
-exécuter le code 'hello_world_pattern_matching.exs'  
-Comparer avec le code 'hello_world_case.exs'
+# Recursion and pattern Matching
+exécutez le code 'hello_world_pattern_matching.exs'  
+Comparez avec le code 'hello_world_case.exs'  
+Vous pouvez aussi regarder et jouer avec le module : loopOver.exs  
 
-# Mix and deps
+# Mix and doctest
 module disponible en Elixir et en Erlang : https://hex.pm/   
-Taper mix new mon_premier_projet  
+Tapez 'mix new mon_premier_projet'  
 'mix test'  
 regardons de plus près  
-doctest  
+doctest, c'est quoi ?  
 
 # Process and messages
 regardons le fichier 'process.exs' et essayons les commandes  
-Jouer avec les process, depuis iex :
+Jouez avec les process, depuis iex :
 - taper la commande c("chartreuse_shop.exs")
 - taper la commande  c("chartreuse_shop_customer.exs")
 - créer un shop : myShop = Chartreuse_shop.open
@@ -51,7 +51,7 @@ Jouer avec les process, depuis iex :
 - Process.exit(jéjé, :halt)
 - Process.exit(myShop, :halt)
 
-# Reste à parler de
+# remains to talk about
 Meta programming:	modifie le langage. aka macro  
 Superviseur  
 OTP et Gen server : gestion de la concurrence  
