@@ -1,5 +1,6 @@
 defmodule MapExample do
 
+
   def callAll() do
     getForcast() |> toFarenith() |> toMap()
   end

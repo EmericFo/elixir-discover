@@ -62,7 +62,7 @@ Map.put(izzy, "age", "40ish")
 izzy |> Map.put("country", "somewhere")
 izzy # que vaut izzy ?
 izzy |> Map.put("country", "somewhere") |> Map.put("country", "here")
-
+Map.merge(izzy, %{:age => "40ish", "country" => "Australia"})
 
 
 
@@ -77,9 +77,3 @@ forecast = %{
 } # map
 Enum.map(forecast, fn ({day, temp}) -> {day, temp * 1.8 + 32} end) # list
 Enum.into(Enum.map(forecast, fn ({day, temp}) -> {day, temp * 1.8 + 32} end), %{})  # back to map
-
-
-
-
-
-IO.inspect(b)

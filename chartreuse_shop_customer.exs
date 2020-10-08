@@ -9,9 +9,8 @@ defmodule Chartreuse_shop_customer do
         IO.puts "[#{inspect self}] #{degrees}"
       42 ->
         IO.puts "[#{inspect self}] Universal answer"
-      :leave->
-        _
-        _ ->
+
+                _ ->
           IO.puts "[#{inspect self}] don't know what to do"
     end
     shop_answer()
